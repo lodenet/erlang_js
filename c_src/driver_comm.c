@@ -55,7 +55,7 @@ char *read_string(char **data) {
 void *ejs_alloc(ErlDrvSizeT size) {
     void *p = driver_alloc(size);
     if (p == NULL) {
-        erts_exit(1, "erlang_js: Can't allocate %lu bytes of memory\n", size);
+        erl_exit(1, "erlang_js: Can't allocate %lu bytes of memory\n", size);
     }
     return p;
 }
